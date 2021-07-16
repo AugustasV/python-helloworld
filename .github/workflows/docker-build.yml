@@ -2,9 +2,9 @@ name: Hello world python CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -38,6 +38,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ secrets.CR_USERNAME }}/python-helloworld:latest
+            ${{ secrets.USERNAME }}/python-helloworld:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
