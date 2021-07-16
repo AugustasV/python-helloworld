@@ -16,7 +16,7 @@ def status():
 @app.route('/metrics')
 def metrics():
     response = app.response_class(
-            response=json.dumps({"status"::"date",:"success","code":0,"data":{"UserCount":140,"UserCountActive":23}}),
+            response=json.dumps({"status":"success","code":0,"data":{"UserCount":140,"UserCountActive":23}}),
             status=200,
             mimetype='application/json'
     )
